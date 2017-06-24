@@ -7,11 +7,12 @@
 <div class="panel panel-default">
  <div class="panel-body">
  <div class="col-sm-9">
- <input type="text" name="url" id="url" class="form-control input-sm" placeholder="http://www.facebook.com" />
+     Url: <input type="text" name="url" id="url" class="form-control input-sm" placeholder="http://www.facebook.com" /><br>
+     Workshop Code: <input type="text" name="shortid" id="shortid" class="form-control input-sm" placeholder="prmq"/>
  </div>
  <div class="col-sm-3">
  {% csrf_token %}
- <button id="submitButton" class="btn btn-primary">Submit</button></p> 
+ <br><button id="submitButton" class="btn btn-primary">Submit</button> 
  </div>
  </div>
  <div class="panel-footer"><span id="url-result">Enter the URL above and click submit!</span></div>

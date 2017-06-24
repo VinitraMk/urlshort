@@ -20,7 +20,8 @@ def redirectOriginal(request,shortId):
 def shortenUrl(request):
     url=request.POST.get("url",'')
     if not (url==''):
-        shortId=getShortUrl()
+        shortId=request.POST.get("shortid",'')
+        #shortId=getShortUrl()
         b=Urls(httpUrl=url,shortId=shortId)
         b.save()
 
