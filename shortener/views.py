@@ -7,7 +7,7 @@ from shortener.models import Urls
 from django.http import HttpResponseRedirect, HttpResponse
 from django.conf import settings
 
-
+# Create your views here.
 def index(request):
     c={}
     return render(request,'shortener/index.html',c)
@@ -30,15 +30,4 @@ def shortenUrl(request):
         return HttpResponse(json.dumps(responseData),content_type="application/json")
     return HttpResponse(json.dumps({"error":"error occured"}),content_type="application/json")
 
-def getShortUrl():
-    length=7
-    char = string.ascii_uppercase + string.digits + string.ascii_lowercase
-    while True:
-        shortId=''.join(random.choice(char) for x in range(length))
-        try:
-            temp=Urls.objects.get(pk=shortId)
-        except:
-            return shortId
 
-
-# Create your views here.
