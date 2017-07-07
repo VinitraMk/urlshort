@@ -2,7 +2,7 @@ from .models import Urls
 from bs4 import BeautifulSoup
 import random
 
-def search(request):
+def searchdb(request):
     query=request.GET.get('query','')
     print(query)
     query=query.strip()

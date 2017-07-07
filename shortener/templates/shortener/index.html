@@ -2,7 +2,7 @@
   
 {% block title %}URL Shortner - Make your URL shorter!{% endblock %}
   
-{% block content %}
+{% block input %}
   
 <div class="panel panel-default">
  <div class="panel-body">
@@ -14,35 +14,5 @@
      </form>
      {% endif %}
  </div>
- <br>
- <form method="get" action=".">
-     <div class="row">
-         <div class="col-md-2 col-sm-12">
-             <div class="form-group">
-                 <input type="text" name="query" value="{{query}}" class="form-control" placeholder="Enter workshop name"/>
-             </div>
-         </div>
-     </div>
- </form>
- <div class="card">
-     <table class="table table-hover card-header" id="urls">
-         <thead>
-             <tr>
-                 <th>Workshop Name</th>
-                 <th>Workshop Code</th>
-                 <th>Workshop Form Url</th>
-             </tr>
-         </thead>
-         <tbody>
-             {% for d in data %}
-                 <tr class="form">
-                     <td>{{d.name}}</td>
-                     <td>{{d.shortId}}</td>
-                     <td>{{d.shortUrl}}</td>
-                 </tr>
-             {% endfor %}
-         </tbody>
-     </table>
  </div>
-</div>
-{% endblock %}
+ {% endblock %}

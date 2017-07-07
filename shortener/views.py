@@ -11,9 +11,9 @@ from .utils import *
 
 # Create your views here.
 def index(request):
-    data,query=search(request)
+    data,query=searchdb(request)
     form=UrlsForm()
-    return render(request,'shortener/index.html',{'title':'Url Shortener','form':form,'view':False,'data':data})
+    return render(request,'shortener/index.html',{'title':'Url Shortener','form':form,'view':False,'data':data,'query':query})
 
 def redirectOriginal(request,shortId):
     url=get_object_or_404(Urls,pk=shortId)

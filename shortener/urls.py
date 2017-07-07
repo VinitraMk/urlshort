@@ -4,5 +4,4 @@ urlpatterns=[
         url(r'^$',views.index,name='index'),
         url(r'^(?P<shortId>[-\w]{1,7})$',views.redirectOriginal,name='redirectOriginal'),
         url(r'^shortenUrl/$',views.shortenUrl,name='shortenUrl'),
-        url(r'^search/$',views.search,name='search'),
        ] 
