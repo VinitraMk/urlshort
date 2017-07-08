@@ -1,2 +1,2 @@
 # urlshort
-A url shortener made with django and python
+A url shortener made with django 
