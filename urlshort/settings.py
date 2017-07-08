@@ -118,6 +118,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+LOGIN_EXEMPT_URLS=(
+    r'^shortener/(?P<shortId>[-\w]{1,7})$',
+)
+
 STATIC_URL = '/static/'
 
-SITE_URL="http://localhost:8000/shortener"
+SITE_URL="http://localhost:8000"

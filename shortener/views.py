@@ -30,7 +30,6 @@ def shortenUrl(request):
             url=Urls.objects.get(shortId=shortId)
             url.shortUrl=settings.SITE_URL+"/"+shortId
             url.save()
-            return redirect('/shortener/')
-        return redirect('/shortener/')
-    return render(request,'shortener/index.html',{"title":"Url Shortener","view":False,"form":form})
+    data,query=searchdb(request)
+    return render(request,'shortener/index.html',{"title":"Url Shortener","view":False,"form":form,'data':data,'query':query})
 

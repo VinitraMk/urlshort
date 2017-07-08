@@ -7,5 +7,4 @@ from shortener.models import Urls
 
 admin.site.register(Urls)
 
-
 # Register your models here.

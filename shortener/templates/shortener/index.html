@@ -7,7 +7,7 @@
 <div class="panel panel-default">
  <div class="panel-body">
      {% if not view %}
-     <form class="form" action="/shortener/shortenUrl/" method="POST">
+     <form class="form" action="/shortenUrl/" method="POST">
          {% csrf_token %}
          {{form}}
          <br><button type="submit" class="btn btn-primary">Add Url</button>
